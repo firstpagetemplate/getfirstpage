@@ -1,0 +1,74 @@
+
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+
+const SolutionLink: React.FC<{ text: string; href?: string; isHighlighted?: boolean }> = ({ text, href = "#", isHighlighted = false }) => (
+  <a 
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`group flex items-center justify-between w-full p-5 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 ${isHighlighted ? 'border-brand/20' : 'hover:border-brand/30'}`}
+  >
+    <span className={`font-semibold text-sm md:text-base transition-colors ${isHighlighted ? 'text-brand' : 'text-gray-600 group-hover:text-brand'}`}>
+      {text}
+    </span>
+    <div className={`p-2 rounded-full transition-all ${isHighlighted ? 'bg-brand/10 text-brand' : 'text-gray-300 group-hover:bg-brand/10 group-hover:text-brand'}`}>
+      <ArrowRight className="w-5 h-5" />
+    </div>
+  </a>
+);
+
+const Solutions: React.FC = () => {
+  const solutionImage = "https://ik.imagekit.io/hijar/Untitled%20design%20(3)_2Fn3OgMad.jpg?updatedAt=1769578012609&ik-s=8d82dfd50422dabf2eb937b6f4f4dfb53d4db7f2";
+
+  return (
+    <section id="solusi" className="py-20 px-6 bg-white">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
+        
+        <div className="flex-1 w-full flex justify-center lg:justify-start">
+          <div className="relative group max-w-md lg:max-w-full">
+            <img 
+              src={solutionImage} 
+              alt="Business Strategy" 
+              className="relative w-full aspect-square object-cover"
+            />
+          </div>
+        </div>
+
+        <div className="flex-1 space-y-8">
+          <div className="space-y-4">
+            <p className="text-gray-400 font-medium tracking-wide text-sm md:text-base">Dapatkan solusi cerdas</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
+              Atasi masalah <br />
+              <span className="text-brand">bisnismu</span>
+            </h2>
+          </div>
+
+          <div className="grid gap-4 max-w-lg">
+            <SolutionLink 
+              text="Website Toko Online UMKM" 
+              href="https://webstoreumkm.vercel.app" 
+              isHighlighted={true}
+            />
+            <SolutionLink 
+              text="Aplikasi Pencatatan Keuangan UMKM" 
+              href="https://umkmfintrack.vercel.app" 
+              isHighlighted={true}
+            />
+            <SolutionLink 
+              text="Template Notion untuk Bisnis" 
+              href="https://firstpagetemplate.super.site/template-notion-by-first-page-template" 
+            />
+            <SolutionLink 
+              text="Template Notion Gratis Untuk Produktivitas" 
+              href="https://firstpagetemplate.super.site/template-notion-by-first-page-template/personal-productivity-system-lite" 
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Solutions;

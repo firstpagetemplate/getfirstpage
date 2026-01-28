@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Page Template | Solusi Digital UMKM</title>
+  <link rel="icon" type="image/png" href="https://ik.imagekit.io/hijar/favicon%20orange%20no%20emblem%20100dpi_LkFi1ULrl.png?updatedAt=1769577888004&ik-s=dc551a02d9a8c1cb7c6cbab822b12839824daa13">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#FF5C00',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    .smooth-scroll { scroll-behavior: smooth; }
+    section { scroll-margin-top: 100px; }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body class="bg-white text-slate-900 smooth-scroll">
+  <div id="root"></div>
+  <script type="module" src="index.tsx"></script>
+</body>
+</html>
