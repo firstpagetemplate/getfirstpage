@@ -5,6 +5,7 @@ import Hero from './components/Hero.tsx';
 import Solutions from './components/Solutions.tsx';
 import SocialMedia from './components/SocialMedia.tsx';
 import Footer from './components/Footer.tsx';
+import WhatsAppButton from './components/WhatsAppButton.tsx';
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <SocialMedia />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
